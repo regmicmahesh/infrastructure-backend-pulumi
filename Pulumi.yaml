@@ -1,0 +1,3 @@
+name: cedro-infrastructure-backend
+runtime: go
+description: Cedro Infrastructure Backend Written in Go
