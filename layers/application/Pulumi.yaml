@@ -1,0 +1,6 @@
+name: application
+runtime:
+  name: go
+  options:
+    binary: ../../application
+description: Application Layer

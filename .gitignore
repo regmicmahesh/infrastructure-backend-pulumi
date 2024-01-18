@@ -1,5 +1,4 @@
-/.pulumi/
-/.vscode/
+/.pulumi/vscode/
 /.vs/
 bin/
 build/
@@ -11,7 +10,6 @@ include/
 lib/
 yarn.lock
 package-lock.json
-Pulumi.*.yaml
 .idea/
 .ionide/
 *.iml
@@ -30,3 +28,7 @@ Gopkg.lock
 target/
 
 env/override.mk
+cedro-infrastructure-backend
+
+.cache
+.pulumi

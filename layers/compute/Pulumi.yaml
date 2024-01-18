@@ -1,0 +1,6 @@
+name: compute
+runtime:
+  name: go
+  options:
+    binary: ../../compute
+description: Compute Layer

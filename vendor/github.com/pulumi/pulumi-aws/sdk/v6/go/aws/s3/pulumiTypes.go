@@ -1173,7 +1173,7 @@ func (o AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketD
 type BucketAclV2AccessControlPolicy struct {
 	// Set of `grant` configuration blocks. See below.
 	Grants []BucketAclV2AccessControlPolicyGrant `pulumi:"grants"`
-	// Configuration block of the bucket owner's display name and ID. See below.
+	// Configuration block for the bucket owner's display name and ID. See below.
 	Owner BucketAclV2AccessControlPolicyOwner `pulumi:"owner"`
 }
 
@@ -1191,7 +1191,7 @@ type BucketAclV2AccessControlPolicyInput interface {
 type BucketAclV2AccessControlPolicyArgs struct {
 	// Set of `grant` configuration blocks. See below.
 	Grants BucketAclV2AccessControlPolicyGrantArrayInput `pulumi:"grants"`
-	// Configuration block of the bucket owner's display name and ID. See below.
+	// Configuration block for the bucket owner's display name and ID. See below.
 	Owner BucketAclV2AccessControlPolicyOwnerInput `pulumi:"owner"`
 }
 
@@ -1277,7 +1277,7 @@ func (o BucketAclV2AccessControlPolicyOutput) Grants() BucketAclV2AccessControlP
 	return o.ApplyT(func(v BucketAclV2AccessControlPolicy) []BucketAclV2AccessControlPolicyGrant { return v.Grants }).(BucketAclV2AccessControlPolicyGrantArrayOutput)
 }
 
-// Configuration block of the bucket owner's display name and ID. See below.
+// Configuration block for the bucket owner's display name and ID. See below.
 func (o BucketAclV2AccessControlPolicyOutput) Owner() BucketAclV2AccessControlPolicyOwnerOutput {
 	return o.ApplyT(func(v BucketAclV2AccessControlPolicy) BucketAclV2AccessControlPolicyOwner { return v.Owner }).(BucketAclV2AccessControlPolicyOwnerOutput)
 }
@@ -1316,7 +1316,7 @@ func (o BucketAclV2AccessControlPolicyPtrOutput) Grants() BucketAclV2AccessContr
 	}).(BucketAclV2AccessControlPolicyGrantArrayOutput)
 }
 
-// Configuration block of the bucket owner's display name and ID. See below.
+// Configuration block for the bucket owner's display name and ID. See below.
 func (o BucketAclV2AccessControlPolicyPtrOutput) Owner() BucketAclV2AccessControlPolicyOwnerPtrOutput {
 	return o.ApplyT(func(v *BucketAclV2AccessControlPolicy) *BucketAclV2AccessControlPolicyOwner {
 		if v == nil {
@@ -1329,7 +1329,7 @@ func (o BucketAclV2AccessControlPolicyPtrOutput) Owner() BucketAclV2AccessContro
 type BucketAclV2AccessControlPolicyGrant struct {
 	// Configuration block for the person being granted permissions. See below.
 	Grantee *BucketAclV2AccessControlPolicyGrantGrantee `pulumi:"grantee"`
-	// Logging permissions assigned to the grantee for the bucket.
+	// Logging permissions assigned to the grantee for the bucket. Valid values: `FULL_CONTROL`, `WRITE`, `WRITE_ACP`, `READ`, `READ_ACP`. See [What permissions can I grant?](https://docs.aws.amazon.com/AmazonS3/latest/userguide/acl-overview.html#permissions) for more details about what each permission means in the context of buckets.
 	Permission string `pulumi:"permission"`
 }
 
@@ -1347,7 +1347,7 @@ type BucketAclV2AccessControlPolicyGrantInput interface {
 type BucketAclV2AccessControlPolicyGrantArgs struct {
 	// Configuration block for the person being granted permissions. See below.
 	Grantee BucketAclV2AccessControlPolicyGrantGranteePtrInput `pulumi:"grantee"`
-	// Logging permissions assigned to the grantee for the bucket.
+	// Logging permissions assigned to the grantee for the bucket. Valid values: `FULL_CONTROL`, `WRITE`, `WRITE_ACP`, `READ`, `READ_ACP`. See [What permissions can I grant?](https://docs.aws.amazon.com/AmazonS3/latest/userguide/acl-overview.html#permissions) for more details about what each permission means in the context of buckets.
 	Permission pulumi.StringInput `pulumi:"permission"`
 }
 
@@ -1409,7 +1409,7 @@ func (o BucketAclV2AccessControlPolicyGrantOutput) Grantee() BucketAclV2AccessCo
 	}).(BucketAclV2AccessControlPolicyGrantGranteePtrOutput)
 }
 
-// Logging permissions assigned to the grantee for the bucket.
+// Logging permissions assigned to the grantee for the bucket. Valid values: `FULL_CONTROL`, `WRITE`, `WRITE_ACP`, `READ`, `READ_ACP`. See [What permissions can I grant?](https://docs.aws.amazon.com/AmazonS3/latest/userguide/acl-overview.html#permissions) for more details about what each permission means in the context of buckets.
 func (o BucketAclV2AccessControlPolicyGrantOutput) Permission() pulumi.StringOutput {
 	return o.ApplyT(func(v BucketAclV2AccessControlPolicyGrant) string { return v.Permission }).(pulumi.StringOutput)
 }
@@ -13161,7 +13161,7 @@ func (o BucketV2ReplicationConfigurationRuleArrayOutput) Index(i pulumi.IntInput
 }
 
 type BucketV2ReplicationConfigurationRuleDestination struct {
-	// Specifies the overrides to use for object owners on replication. Must be used in conjunction with `accountId` owner override configuration.
+	// Specifies the overrides to use for object owners on replication (documented below). Must be used in conjunction with `accountId` owner override configuration.
 	AccessControlTranslations []BucketV2ReplicationConfigurationRuleDestinationAccessControlTranslation `pulumi:"accessControlTranslations"`
 	// Account ID to use for overriding the object owner on replication. Must be used in conjunction with `accessControlTranslation` override configuration.
 	AccountId *string `pulumi:"accountId"`
@@ -13190,7 +13190,7 @@ type BucketV2ReplicationConfigurationRuleDestinationInput interface {
 }
 
 type BucketV2ReplicationConfigurationRuleDestinationArgs struct {
-	// Specifies the overrides to use for object owners on replication. Must be used in conjunction with `accountId` owner override configuration.
+	// Specifies the overrides to use for object owners on replication (documented below). Must be used in conjunction with `accountId` owner override configuration.
 	AccessControlTranslations BucketV2ReplicationConfigurationRuleDestinationAccessControlTranslationArrayInput `pulumi:"accessControlTranslations"`
 	// Account ID to use for overriding the object owner on replication. Must be used in conjunction with `accessControlTranslation` override configuration.
 	AccountId pulumi.StringPtrInput `pulumi:"accountId"`
@@ -13258,7 +13258,7 @@ func (o BucketV2ReplicationConfigurationRuleDestinationOutput) ToBucketV2Replica
 	return o
 }
 
-// Specifies the overrides to use for object owners on replication. Must be used in conjunction with `accountId` owner override configuration.
+// Specifies the overrides to use for object owners on replication (documented below). Must be used in conjunction with `accountId` owner override configuration.
 func (o BucketV2ReplicationConfigurationRuleDestinationOutput) AccessControlTranslations() BucketV2ReplicationConfigurationRuleDestinationAccessControlTranslationArrayOutput {
 	return o.ApplyT(func(v BucketV2ReplicationConfigurationRuleDestination) []BucketV2ReplicationConfigurationRuleDestinationAccessControlTranslation {
 		return v.AccessControlTranslations
@@ -13321,6 +13321,7 @@ func (o BucketV2ReplicationConfigurationRuleDestinationArrayOutput) Index(i pulu
 }
 
 type BucketV2ReplicationConfigurationRuleDestinationAccessControlTranslation struct {
+	// Specifies the replica ownership. For default and valid values, see [PUT bucket replication](https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutBucketReplication.html) in the Amazon S3 API Reference. The only valid value is `Destination`.
 	Owner string `pulumi:"owner"`
 }
 
@@ -13336,6 +13337,7 @@ type BucketV2ReplicationConfigurationRuleDestinationAccessControlTranslationInpu
 }
 
 type BucketV2ReplicationConfigurationRuleDestinationAccessControlTranslationArgs struct {
+	// Specifies the replica ownership. For default and valid values, see [PUT bucket replication](https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutBucketReplication.html) in the Amazon S3 API Reference. The only valid value is `Destination`.
 	Owner pulumi.StringInput `pulumi:"owner"`
 }
 
@@ -13390,6 +13392,7 @@ func (o BucketV2ReplicationConfigurationRuleDestinationAccessControlTranslationO
 	return o
 }
 
+// Specifies the replica ownership. For default and valid values, see [PUT bucket replication](https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutBucketReplication.html) in the Amazon S3 API Reference. The only valid value is `Destination`.
 func (o BucketV2ReplicationConfigurationRuleDestinationAccessControlTranslationOutput) Owner() pulumi.StringOutput {
 	return o.ApplyT(func(v BucketV2ReplicationConfigurationRuleDestinationAccessControlTranslation) string { return v.Owner }).(pulumi.StringOutput)
 }

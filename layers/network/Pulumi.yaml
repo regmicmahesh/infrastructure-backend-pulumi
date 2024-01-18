@@ -1,0 +1,6 @@
+name: network
+runtime:
+  name: go
+  options:
+    binary: ../../network
+description: Network Layer

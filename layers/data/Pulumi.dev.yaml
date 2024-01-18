@@ -1,0 +1,8 @@
+encryptionsalt: v1:+u7jrsLKo+Y=:v1:IS482LyqGeBBSIZu:jXToyhheIao3vMbPU6ZcYZvzKjlPsw==
+config:
+  aws:region: us-east-1
+
+  graph-database:instanceClass: "db.t4g.small"
+  graph-database:storage: 16
+
+  api-database:instanceClass: "db.t3.medium"

@@ -1,0 +1,6 @@
+name: assets
+runtime:
+  name: go
+  options:
+    binary: ../../assets
+description: Assets Layer

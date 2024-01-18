@@ -61,7 +61,7 @@ github.com/charmbracelet/lipgloss
 # github.com/cheggaaa/pb v1.0.29
 ## explicit; go 1.12
 github.com/cheggaaa/pb
-# github.com/cloudflare/circl v1.3.3
+# github.com/cloudflare/circl v1.3.7
 ## explicit; go 1.19
 github.com/cloudflare/circl/dh/x25519
 github.com/cloudflare/circl/dh/x448
@@ -269,11 +269,39 @@ github.com/pulumi/esc/internal/util
 github.com/pulumi/esc/schema
 github.com/pulumi/esc/syntax
 github.com/pulumi/esc/syntax/encoding
-# github.com/pulumi/pulumi-aws/sdk/v6 v6.17.0
+# github.com/pulumi/pulumi-aws/sdk/v6 v6.18.2
 ## explicit; go 1.21
+github.com/pulumi/pulumi-aws/sdk/v6/go/aws
+github.com/pulumi/pulumi-aws/sdk/v6/go/aws/acm
+github.com/pulumi/pulumi-aws/sdk/v6/go/aws/autoscaling
+github.com/pulumi/pulumi-aws/sdk/v6/go/aws/cloudfront
+github.com/pulumi/pulumi-aws/sdk/v6/go/aws/cloudwatch
+github.com/pulumi/pulumi-aws/sdk/v6/go/aws/docdb
+github.com/pulumi/pulumi-aws/sdk/v6/go/aws/ec2
+github.com/pulumi/pulumi-aws/sdk/v6/go/aws/ecr
+github.com/pulumi/pulumi-aws/sdk/v6/go/aws/ecs
+github.com/pulumi/pulumi-aws/sdk/v6/go/aws/iam
 github.com/pulumi/pulumi-aws/sdk/v6/go/aws/internal
+github.com/pulumi/pulumi-aws/sdk/v6/go/aws/lb
+github.com/pulumi/pulumi-aws/sdk/v6/go/aws/rds
+github.com/pulumi/pulumi-aws/sdk/v6/go/aws/route53
 github.com/pulumi/pulumi-aws/sdk/v6/go/aws/s3
-# github.com/pulumi/pulumi/sdk/v3 v3.100.0
+github.com/pulumi/pulumi-aws/sdk/v6/go/aws/servicediscovery
+github.com/pulumi/pulumi-aws/sdk/v6/go/aws/ssm
+github.com/pulumi/pulumi-aws/sdk/v6/go/aws/vpc
+# github.com/pulumi/pulumi-awsx/sdk/v2 v2.4.0
+## explicit; go 1.21
+github.com/pulumi/pulumi-awsx/sdk/v2/go/awsx/ec2
+github.com/pulumi/pulumi-awsx/sdk/v2/go/awsx/internal
+# github.com/pulumi/pulumi-docker/sdk/v4 v4.4.3
+## explicit; go 1.21
+github.com/pulumi/pulumi-docker/sdk/v4/go/docker
+github.com/pulumi/pulumi-docker/sdk/v4/go/docker/internal
+# github.com/pulumi/pulumi-random/sdk/v4 v4.15.0
+## explicit; go 1.21
+github.com/pulumi/pulumi-random/sdk/v4/go/random
+github.com/pulumi/pulumi-random/sdk/v4/go/random/internal
+# github.com/pulumi/pulumi/sdk/v3 v3.101.1
 ## explicit; go 1.18
 github.com/pulumi/pulumi/sdk/v3/go/common/apitype
 github.com/pulumi/pulumi/sdk/v3/go/common/constant
@@ -306,6 +334,7 @@ github.com/pulumi/pulumi/sdk/v3/go/common/version
 github.com/pulumi/pulumi/sdk/v3/go/common/workspace
 github.com/pulumi/pulumi/sdk/v3/go/internal
 github.com/pulumi/pulumi/sdk/v3/go/pulumi
+github.com/pulumi/pulumi/sdk/v3/go/pulumi/config
 github.com/pulumi/pulumi/sdk/v3/go/pulumi/internals
 github.com/pulumi/pulumi/sdk/v3/go/pulumix
 github.com/pulumi/pulumi/sdk/v3/nodejs/npm
@@ -333,6 +362,9 @@ github.com/sergi/go-diff/diffmatchpatch
 # github.com/skeema/knownhosts v1.2.1
 ## explicit; go 1.17
 github.com/skeema/knownhosts
+# github.com/spf13/cast v1.4.1
+## explicit
+github.com/spf13/cast
 # github.com/spf13/cobra v1.7.0
 ## explicit; go 1.15
 github.com/spf13/cobra
@@ -450,7 +482,7 @@ golang.org/x/tools/internal/pkgbits
 golang.org/x/tools/internal/tokeninternal
 golang.org/x/tools/internal/typeparams
 golang.org/x/tools/internal/typesinternal
-# google.golang.org/genproto/googleapis/rpc v0.0.0-20230706204954-ccb25ca9f130
+# google.golang.org/genproto/googleapis/rpc v0.0.0-20230731190214-cbb8c96f2d6d
 ## explicit; go 1.19
 google.golang.org/genproto/googleapis/rpc/status
 # google.golang.org/grpc v1.57.1

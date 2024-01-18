@@ -1,0 +1,6 @@
+name: certs
+runtime:
+  name: go
+  options:
+    binary: ../../certs
+description: Certificates Layer

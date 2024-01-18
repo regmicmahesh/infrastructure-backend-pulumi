@@ -1,12 +1,7 @@
-FROM --platform=linux/amd64 docker.io/pulumi/pulumi-go:3.101.1
-
-ARG AWS_PLUGIN_VERSION=6.17.0
+FROM --platform=linux/amd64 docker.io/pulumi/pulumi-go:3.103.1-debian-amd64
 
 RUN apt update -y \
-  && apt install make --no-install-recommends \
-  && pulumi plugin install resource aws $AWS_PLUGIN_VERSION
-
-
+  && apt install make --no-install-recommends
 
 # Cleanup
 RUN rm -rf /var/lib/apt/lists/*

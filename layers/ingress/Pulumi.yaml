@@ -1,0 +1,6 @@
+name: ingress
+runtime:
+  name: go
+  options:
+    binary: ../../ingress
+description: Ingress Layer

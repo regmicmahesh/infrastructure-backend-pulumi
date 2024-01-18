@@ -1,0 +1,6 @@
+name: data
+runtime:
+  name: go
+  options:
+    binary: ../../data
+description: Data Layer

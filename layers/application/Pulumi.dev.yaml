@@ -1,0 +1,24 @@
+encryptionsalt: v1:+u7jrsLKo+Y=:v1:IS482LyqGeBBSIZu:jXToyhheIao3vMbPU6ZcYZvzKjlPsw==
+config:
+  aws:region: us-east-1
+
+  cluster:instanceClass: "t3.medium"
+
+  graph-service:image: "docker.io/graphprotocol/graph-node:latest"
+  graph-service:cpu: "256"
+  graph-service:memory: "256"
+
+  graph-service:env-vars:
+    ipfs: "https://ipfs.dev.example.com"
+
+  api-service:image: "example-image:latest"
+  api-service:cpu: "256"
+  api-service:memory: "512"
+  api-service:domain: "api.dev.example.com"
+  api-service:root-domain: "dev.example.com"
+  api-service:env-vars:
+    nodeEnv: "production"
+    port: "3000"
+
+  app:env-vars:
+    viteBaseAPIURL: "https://api.dev.example.com"

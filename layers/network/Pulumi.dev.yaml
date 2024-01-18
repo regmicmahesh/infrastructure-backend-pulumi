@@ -1,0 +1,7 @@
+encryptionsalt: v1:RlXncL35j5o=:v1:iabnJuFvZqQg15MB:HsFAAmAHgooGITmuPzk4Of/3yK4rNA==
+config:
+  aws:region: us-east-1
+
+  vpc:azCount: 2
+  vpc:cidrBlock: "10.0.0.0/16"
+  vpc:natGatewayStrategy: Single # Valid values: None, Single, OnePerAz

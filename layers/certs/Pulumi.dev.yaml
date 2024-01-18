@@ -1,0 +1,6 @@
+encryptionsalt: v1:+u7jrsLKo+Y=:v1:IS482LyqGeBBSIZu:jXToyhheIao3vMbPU6ZcYZvzKjlPsw==
+config:
+  aws:region: us-east-1
+
+  root-domain: "dev.example.com"
+  wildcard-domain: "*.dev.example.com"
